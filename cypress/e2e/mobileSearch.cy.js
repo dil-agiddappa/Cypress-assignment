@@ -1,8 +1,11 @@
+///<reference types="Cypress" /> 
 import SearchPage from '../pages/SearchPage';
+import LoginPage from '../pages/LoginPage';
 
 describe('Mobile Search and Title Verification', () => {
     before(() => {
         cy.login('username', 'password');
+    
     });
 
     const mobiles = [

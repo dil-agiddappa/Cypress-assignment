@@ -26,7 +26,7 @@
 
 
 Cypress.Commands.add('login', (username, password) => {
-    LoginPage.enterUsername(username);
-    LoginPage.enterPassword(password);
-    LoginPage.clickLogin();
+    loginPage.enterUsername(username);
+    loginPage.enterPassword(password);
+    loginPage.clickLogin();
 });

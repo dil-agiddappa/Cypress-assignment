@@ -4,15 +4,28 @@ class LoginPage {
     }
 
     enterUsername(username) {
-        cy.get('#username').type(username);
+        cy.get('#username').type("anithajaya8@gmail.com");
     }
 
     enterPassword(password) {
-        cy.get('#password').type(password);
+        cy.get('#password').type("Hasini@955");
     }
 
     clickLogin() {
         cy.get('#login-button').click();
+    }
+    login(username, password) {
+        this.visit();
+        this.enterUsername(username);
+        this.enterPassword(password);
+        this.clickLogin();
+    }
+    assertLoginSuccess() {
+        cy.url().should('include', '/dashboard');
+        cy.contains('Welcome').should('be.visible');
+    }
+    assertLoginFailure() {
+        cy.contains('Invalid credentials').should('be.visible');
     }
 }
 

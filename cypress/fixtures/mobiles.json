@@ -1,0 +1,7 @@
+
+  [
+    { "name": "iPhone 14", "expectedInTitle": "iPhone 14", "shouldAddToCart": true },
+    { "name": "Samsung Galaxy S23", "expectedInTitle": "Samsung Galaxy", "shouldAddToCart": true },
+    { "name": "OnePlus 11", "expectedInTitle": "OnePlus", "shouldAddToCart": false },
+    { "name": "", "expectedInTitle": "", "shouldAddToCart": false }
+  ]
