@@ -4,7 +4,10 @@ class LoginPage {
     }
 
     enterUsername(username) {
-        cy.get('#username').type("anithajaya8@gmail.com");
+        cy.get('.nav-action-inner').click({force:true})
+        cy.get('#ap_email_login').type(username);
+        cy.get('input[type="submit"]').first()
+
     }
 
     enterPassword(password) {
